@@ -1,9 +1,8 @@
-job('prueba1-Job-DSL'){
+job('prueba2-Job-DSL'){
   
   description('Job DSL de ejemplo para Jenkins')
   scm{
-    git('https://github.com/morgadodesarrollador/Jenkins.git', 'master'){ 
-      node -> 
+    git('https://github.com/morgadodesarrollador/Jenkins.git', 'master'){ node -> 
         node / gitConfigName('morgadodesarrollador')
         node / gitConfigEmail('morgadodesarrollador@gmail.com')
     }
@@ -19,7 +18,7 @@ job('prueba1-Job-DSL'){
   }
   
   steps {
-    shell("bash jobscript.sh")
+    shell("bash ./DSL/scripts/job.sh")
   }
   
   publishers {
