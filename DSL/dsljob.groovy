@@ -18,7 +18,7 @@ job('prueba2-Job-DSL'){
   }
   
   steps {
-    shell("bash ./scripts/job.sh")
+    shell("bash ./DSL/scripts/job.sh")
   }
   
   publishers {
@@ -27,7 +27,7 @@ job('prueba2-Job-DSL'){
     	notifyAborted(true)
       	notifyEveryFailure(true)
       	notifyNotBuilt(false)
-    	notifyUnstable(false)
+    	  notifyUnstable(false)
       	notifyBackToNormal(true)
       	notifySuccess(false)
       	notifyRepeatedFailure(false)
