@@ -18,7 +18,7 @@ job('prueba2-Job-DSL'){
   }
   
   steps {
-    shell("bash ./DSL/scripts/job.sh")
+    shell("bash ./scripts/job.sh")
   }
   
   publishers {
