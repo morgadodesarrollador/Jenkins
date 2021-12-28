@@ -1,3 +1,3 @@
 
-cd AppNodeJS
+#cd AppNodeJS
 npm install
