@@ -18,7 +18,7 @@ job('App-Nodejs-DSL') {
         nodejs('nodejs')
     }
     steps {
-        shell("bash AppNodeJS/install.sh")
+        shell("bash install.sh")
     }
     publishers {
 	    slackNotifier {
