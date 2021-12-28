@@ -1,7 +1,7 @@
 job('App-Nodejs-DSL') {
     description('Aplicación Node JS DSL para el curso de Jenkins')
     scm {
-        git('https://github.com/morgadodesarrollador/Jenkins.git', 'master'){ node -> 
+        git('https://github.com/morgadodesarrollador/Jenkins.git', 'rama-appnodejs'){ node -> 
             node / gitConfigName('morgadodesarrollador')
             node / gitConfigEmail('morgadodesarrollador@gmail.com')
             extensions {
