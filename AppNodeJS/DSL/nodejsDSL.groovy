@@ -1,4 +1,4 @@
-job('Aplicacion-Nodejs-DSL') {
+job('App-Nodejs-DSL') {
     description('Aplicación Node JS DSL para el curso de Jenkins')
     scm {
         git('https://github.com/morgadodesarrollador/Jenkins.git', 'master'){ node -> 
@@ -6,7 +6,7 @@ job('Aplicacion-Nodejs-DSL') {
             node / gitConfigEmail('morgadodesarrollador@gmail.com')
             extensions {
                 sparseCheckoutPath {
-                    path('/AppNodeJS')
+                    path('AppNodeJS')
                 }
             }
         }
@@ -18,10 +18,10 @@ job('Aplicacion-Nodejs-DSL') {
         nodejs('nodejs')
     }
     steps {
-        shell("npm install")
+        shell("bash AppNodeJS/install.sh")
     }
     publishers {
-	slackNotifier {
+	    slackNotifier {
             notifyAborted(true)
             notifyEveryFailure(true)
             notifyNotBuilt(false)
