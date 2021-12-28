@@ -6,7 +6,7 @@ job('Aplicacion-Nodejs-DSL') {
             node / gitConfigEmail('morgadodesarrollador@gmail.com')
             extensions {
                 sparseCheckoutPath {
-                    path('./AppNodeJS')
+                    path('/AppNodeJS')
                 }
             }
         }
