@@ -25,7 +25,7 @@ job('App-Nodejs-Docker-DSL') {
     }
     publishers {
 	    slackNotifier {
-            notifyAborted(true)
+            notifyAborted(false)
             notifyEveryFailure(true)
             notifyNotBuilt(false)
             notifyUnstable(false)
