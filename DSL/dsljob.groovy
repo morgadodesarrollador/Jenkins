@@ -2,7 +2,7 @@ job('prueba2-Job-DSL'){
   
   description('Job DSL de ejemplo para Jenkins')
   scm{
-    git('https://github.com/morgadodesarrollador/Jenkins.git', 'master'){ node -> 
+    git('https://github.com/morgadodesarrollador/Jenkins.git', 'app-dslbasicos'){ node -> 
         node / gitConfigName('morgadodesarrollador')
         node / gitConfigEmail('morgadodesarrollador@gmail.com')
     }
