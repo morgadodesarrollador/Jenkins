@@ -11,7 +11,7 @@ job('prueba2-Job-DSL'){
   parameters{
   	stringParam ('nombre', defaultValue='Jenkins', description='parámetro cadena en el job hijo')
     booleanParam('agente', true)
-    choiceParam('planetas', ['Venus', 'Marte', 'Tierra (default)', 'Jupiter', 'Saturno'. 'Saturno'])
+    choiceParam('planetas', ['Venus', 'Marte', 'Tierra (default)', 'Jupiter', 'Saturno'. 'Saturno', 'Neptuno'])
   }
   triggers{
     githubPush()
