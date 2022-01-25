@@ -14,7 +14,7 @@ job('prueba2-Job-DSL'){
     choiceParam('planetas', ['Venus', 'Marte', 'Tierra (default)', 'Jupiter', 'Saturno'])
   }
   triggers{
-    cron('H/7 * * * *')
+    githubPush()
   }
   
   steps {
