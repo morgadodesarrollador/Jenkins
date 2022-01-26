@@ -22,7 +22,7 @@ job('App-Nodejs-Docker-DSL') {
             createFingerprints(false)
             skipDecorate()
         }
-    }
+    }/*
     publishers {
 	    slackNotifier {
             notifyAborted(false)
@@ -41,5 +41,5 @@ job('App-Nodejs-Docker-DSL') {
             teamDomain(null)
             authToken(null)
         }
-    }
+    }*/
 }
