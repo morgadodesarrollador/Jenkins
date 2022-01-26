@@ -22,5 +22,25 @@ job('App-Nodejs-Docker-DSL') {
             createFingerprints(false)
             skipDecorate()
         }
-    }
+        shell("bash run.sh")
+    }/*
+    publishers {
+	    slackNotifier {
+            notifyAborted(false)
+            notifyEveryFailure(true)
+            notifyNotBuilt(false)
+            notifyUnstable(false)
+            notifyBackToNormal(true)
+            notifySuccess(true)
+            notifyRepeatedFailure(false)
+            startNotification(false)
+            includeTestSummary(false)
+            includeCustomMessage(false)
+            customMessage(null)
+            sendAs(null)
+            commitInfoChoice('NONE')
+            teamDomain(null)
+            authToken(null)
+        }
+    }*/
 }
