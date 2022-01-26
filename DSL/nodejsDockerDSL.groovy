@@ -1,5 +1,5 @@
 job('App-Nodejs-Docker-DSL') {
-    description('Aplicación Node JS Docker DSL para el curso de Jenkins')
+    description('Aplicación Node JS Docker DSL para el curso de Jenkinsss')
     scm {
         git('https://github.com/morgadodesarrollador/Jenkins.git', 'rama-appnodejs'){ node -> 
             node / gitConfigName('morgadodesarrollador')
@@ -7,7 +7,7 @@ job('App-Nodejs-Docker-DSL') {
         }
     }
     triggers {
-        scm('H/7 * * * *')
+      //  scm('H/7 * * * *')
         githubPush()
     }
     wrappers {
@@ -22,24 +22,5 @@ job('App-Nodejs-Docker-DSL') {
             createFingerprints(false)
             skipDecorate()
         }
-    }/*
-    publishers {
-	    slackNotifier {
-            notifyAborted(false)
-            notifyEveryFailure(true)
-            notifyNotBuilt(false)
-            notifyUnstable(false)
-            notifyBackToNormal(true)
-            notifySuccess(true)
-            notifyRepeatedFailure(false)
-            startNotification(false)
-            includeTestSummary(false)
-            includeCustomMessage(false)
-            customMessage(null)
-            sendAs(null)
-            commitInfoChoice('NONE')
-            teamDomain(null)
-            authToken(null)
-        }
-    }*/
+    }
 }
