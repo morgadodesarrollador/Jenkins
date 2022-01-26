@@ -1,5 +1,5 @@
 job('App-Nodejs-Docker-DSL') {
-    description('Aplicación Node JS Docker DSL para el curso de Jenkins')
+    description('Aplicación Node JS Docker DSL para el curso de Jenkins Y run.sh')
     scm {
         git('https://github.com/morgadodesarrollador/Jenkins.git', 'rama-appnodejs'){ node -> 
             node / gitConfigName('morgadodesarrollador')
