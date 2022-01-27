@@ -7,7 +7,7 @@ job('App-Nodejs-Docker-DSL') {
         }
     }
     triggers {
-      //  scm('H/7 * * * *')
+        scm('H/40 * * * *')
         githubPush()
     }
     wrappers {
