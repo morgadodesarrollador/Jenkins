@@ -51,11 +51,14 @@ pipeline {
                 stage('Secuencial 1') {
                     steps {
                         echo "Secuencial: Parte 1"
+                        sh '''
+                		       sleep 9
+            		        '''
                     }
                 }
                 stage('Secuencial 2') {
                     steps {
-                        sh 'sleep 16'
+                        sh 'sleep 6'
                     }
                 }
             }
