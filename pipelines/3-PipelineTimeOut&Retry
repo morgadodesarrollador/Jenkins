@@ -14,3 +14,51 @@ pipeline {
         }
     }
 }
+
+//2-. Pipeline con timeout y retry anidado
+pipeline {
+    agent any
+    options{ 
+        //el pipeline ABORTA si no se ejecuta todo en menos de 1h
+        timeout(time:1 , unit: 'HOURS')
+    }
+    stages {
+        stage('Deploy') {
+            option{
+                //el deploy ABORTA si no finaliza en 20m
+                timeout(time:20 , unit: 'MINUTES')
+            }
+            steps {
+                //establezco 5sec en ejecutar 3 reintentos
+                timeout(time: 5, unit: 'SECONDS') {
+                    retry(3){
+                        sh 'hola'
+                    }
+                }
+            }
+        }
+    }
+}
+//3-. Pipeline con timeout/retry en stage Secuencial
+pipeline {
+    agent any
+    stages {
+        stage('Secuencial') {
+		        options {
+                timeout(time: 15, unit: 'SECONDS')
+		}
+            stages {
+                stage('Secuencial 1') {
+                    steps {
+                        echo "Secuencial: Parte 1"
+                    }
+                }
+                stage('Secuencial 2') {
+                    steps {
+                        sh 'sleep 16'
+                    }
+                }
+            }
+        }
+    }
+}
