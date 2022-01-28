@@ -1,7 +1,15 @@
 pipeline {
     agent any
+    options{ 
+        //el pipeline ABORTA si no se ejecuta todo en menos de 1h
+        timeout(time:1 , unit: 'HOURS')
+    }
     stages {
         stage('Deploy') {
+            option{
+                //el deploy ABORTA si no finaliza en 20m
+                timeout(time:20 , unit: 'MINUTES')
+            }
             steps {
                 //establezco 5sec en ejecutar 3 reintentos
                 timeout(time: 5, unit: 'SECONDS') {
