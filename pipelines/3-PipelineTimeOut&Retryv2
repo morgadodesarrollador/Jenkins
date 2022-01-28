@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages {
+        stage('Deploy') {
+            steps {
+                //establezco 5sec en ejecutar 3 reintentos
+                timeout(time: 5, unit: 'SECONDS') {
+                    retry(3){
+                        sh 'hola'
+                    }
+                }
+            }
+        }
+    }
+}
