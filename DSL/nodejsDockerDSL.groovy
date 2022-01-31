@@ -22,7 +22,7 @@ job('App-Nodejs-Docker-DSL') {
             createFingerprints(false)
             skipDecorate()
         }
-     //   shell("bash run.sh")
+        shell("bash run.sh")
     }/*
     publishers {
 	    slackNotifier {
