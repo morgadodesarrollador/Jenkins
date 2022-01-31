@@ -17,7 +17,7 @@ job('App-Nodejs-Docker-DSL') {
         dockerBuildAndPublish {
             repositoryName('morgadoberruezo/applibreria')
          //   tag('${GIT_REVISION,length=7}')
-         //   tag('latest')
+            tag('latest')
             registryCredentials('docker-hub')
             forcePull(false)
             createFingerprints(false)
