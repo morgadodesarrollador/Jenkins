@@ -1,3 +1,5 @@
+
+//caso1: acceso al environment: credencial username/password
 pipeline {
     agent any
     stages {
