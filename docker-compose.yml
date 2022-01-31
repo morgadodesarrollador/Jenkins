@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  nodejs:
+    image: morgadoberruezo/applibreria
+    container_name: applibreria
+    ports:
+      - "3000:3000"

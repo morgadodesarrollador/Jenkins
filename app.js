@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-  res.send('Bunenos dias clase ..., estamos con jenkins y NOS VAMOS A DESAyUNAR ...');
+  res.send('instalacion de la app via docker-compose ...');
 });
 
 var server = app.listen(3000, function () {
