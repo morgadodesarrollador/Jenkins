@@ -8,7 +8,7 @@ node {
    stage('test') {
      def contenedortest = docker.image('node:4.6')
      contenedortest.pull()
-     contenedortest.inside {
+     contenedortest.inside("-u root:root") {
        sh 'npm install --only=dev'
        sh 'npm test'
      }
