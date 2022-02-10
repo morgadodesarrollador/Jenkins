@@ -20,7 +20,7 @@ node {
      }
    }
    stage('run') {
-     def contenedortest = docker.image('morgadoberruezo/appnodejs:cade8cc')
+     def contenedortest = docker.image("morgadoberruezo/appnodejs:${gitcommit}")
      contenedortest.pull()
      contenedortest.inside {
        sh 'echo run ...'
