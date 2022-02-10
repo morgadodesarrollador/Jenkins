@@ -19,4 +19,12 @@ node {
       nuestraapp.push()
      }
    }
+   stage('run') {
+     def contenedortest = docker.image('morgadoberruezo/appnodejs:cade8cc')
+     contenedortest.pull()
+     contenedortest.inside {
+       sh 'echo run ...'
+       sh 'npm start'
+     }
+   }    
 }
