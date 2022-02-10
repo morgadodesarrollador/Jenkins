@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-  res.send('Hello World! Hola Mundo desde Jenkins y el ies cura valera!');
+  res.send('Hello World! Hola Mundo el ies cura valera!');
 });
 
 var server = app.listen(3000, function () {
