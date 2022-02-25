@@ -6,8 +6,10 @@ pipeline {
                 CRED_USUARIO = credentials('usuario1')
             }
             steps {
-                sh 'echo "El usuario es $CRED_USUARIO_USR"'
-                sh 'echo "La contraseña es $CRED_USUARIO_PSW"'
+                // sh "git rev-parse --short HEAD > .git/commit-id"
+                // gitcommit = readFile('.git/commit-id').trim()
+                sh 'echo "commit actual ${GIT_COMMIT}"'
+                sh 'echo "commit anterior ${GIT_PREVIOUS_COMMIT}"'
             }
         }
     }
