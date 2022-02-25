@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Ejemplo Username/Password') {
             environment {
-                CRED_USUARIO = credentials('usuario2')
+                CRED_USUARIO = credentials('usuario1')
             }
             steps {
                 // sh "git rev-parse --short HEAD > .git/commit-id"
