@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Ejemplo Username/Password') {
+        stage('Ejemplo usuario/Password') {
             environment {
                 CRED_USUARIO = credentials('usuario1')
             }
