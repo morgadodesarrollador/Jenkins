@@ -4,7 +4,7 @@ pipeline {
    // se arranca con Build pero podríamos arrancar con una etapa anterior para CLONAR el repositorio 
     	stage('Build') {  
         	steps {  
-		     sh 'echo "construyendo la aplicación en 2025"'
+		     sh 'echo "construyendo la aplicación en 2300"'
 		     sh '''
 		        echo "varias acciones de shell"
 		        pwd 
